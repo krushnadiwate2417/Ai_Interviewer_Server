@@ -8,8 +8,7 @@ const answerModel = mongoose.Schema({
     },
     answers : [{
         questionId : {
-            type : mongoose.Schema.Types.ObjectId,
-            ref : "Question",
+            type : String,
             required : [true, "Question Id is required to Map and Populate."]
         },
         answer : {
