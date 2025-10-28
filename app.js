@@ -8,6 +8,10 @@ const cors = require("cors");
 
 const allowedOrigins = ["http://localhost:5173"]
 
+
+
+const app = express();
+
 app.use(cors({
     origin : function (origin,callback){
         if(!origin || allowedOrigins.includes(origin)){
@@ -19,7 +23,6 @@ app.use(cors({
     credentials : true
 }))
 
-const app = express();
 app.use(express.json());
 app.use("/api/v1/questions",questionRouter);
 app.use("/api/v1/company",companyRouter);
