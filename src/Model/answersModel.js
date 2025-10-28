@@ -6,6 +6,10 @@ const answerModel = mongoose.Schema({
         type : mongoose.Schema.Types.ObjectId,
         ref : "User"
     },
+    questionSetId : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "Question"
+    },
     answers : [{
         questionId : {
             type : String,
