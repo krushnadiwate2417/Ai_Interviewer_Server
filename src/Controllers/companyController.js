@@ -5,7 +5,7 @@ const Company = require('./../Model/companyModel');
 exports.getCompanyandRole = async (req,res)=>{
     try {
         const companyData = await Company.find();
-        res.status(201).json({
+        res.status(200).json({
             status : "success",
             companies : companyData.length,
             companyData
