@@ -11,7 +11,7 @@ exports.getQuestions = async (req,res)=>{
     } catch (error) {
         res.status(400).json({
             status : "fail",
-            error
+            error : error.message
         })
     }
 }
@@ -28,7 +28,7 @@ exports.getQuestionsAsRole = async (req,res) =>{
     } catch (error) {
         res.status(400).json({
             status : "fail",
-            error
+            error : error.message
         })
     }
 }
@@ -45,7 +45,7 @@ exports.addQuestions = async (req,res)=>{
     } catch (error) {
         res.status(400).json({
             status : "fail",
-            error
+            error : error.message
         })
     }
 }

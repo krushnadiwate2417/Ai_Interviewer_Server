@@ -15,7 +15,7 @@ exports.saveAnswers = async (req,res)=>{
     } catch (error) {
         res.status(400).json({
             status : "fail",
-            error
+            error : error.message
         })
     }
 }
@@ -48,7 +48,7 @@ exports.getAnswers = async (req,res)=>{
     } catch (error) {
         res.status(400).json({
             status : "fail",
-            error
+            error : error.message
         })
     }
 }

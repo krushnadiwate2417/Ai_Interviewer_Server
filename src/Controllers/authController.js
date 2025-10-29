@@ -41,7 +41,7 @@ exports.validateToken = async(req,res) =>{
     } catch (error) {
         res.status(400).json({
             status : 'fail',
-            error
+            error : error.message
         })
     }
 }
@@ -62,7 +62,7 @@ exports.signUp = async(req,res)=>{
     } catch (error) {
         res.status(400).json({
             status : 'fail',
-            error
+            error : error.message
         })
     }
 }
@@ -104,7 +104,7 @@ exports.login = async (req,res) =>{
     } catch (error) {
          res.status(400).json({
             status : 'fail',
-            error
+            error : error.message
         })
     }
 }
